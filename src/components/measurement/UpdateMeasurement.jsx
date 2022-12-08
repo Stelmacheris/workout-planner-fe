@@ -29,7 +29,7 @@ const UpdateMeasurement = () => {
     if (info.height !== "" && info.height !== "") {
       try {
         const response = await axios.put(
-          `http://workout-app-ktu-fe-api1.onrender.com/measurements/` + id,
+          `https://workout-app-ktu-fe-api1.onrender.com/measurements/` + id,
           info,
           {
             headers: {

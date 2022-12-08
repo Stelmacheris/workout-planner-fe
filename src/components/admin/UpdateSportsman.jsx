@@ -33,7 +33,7 @@ const UpdateSportsman = (props) => {
     ) {
       try {
         const response = await axios.put(
-          "http://workout-app-ktu-fe-api1.onrender.com/sportsman/" + id,
+          "https://workout-app-ktu-fe-api1.onrender.com/sportsman/" + id,
           info,
           {
             headers: {

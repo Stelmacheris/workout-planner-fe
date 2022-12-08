@@ -30,7 +30,7 @@ const AllComments = () => {
   const deleteHandler = async (id) => {
     try {
       const response = await axios.delete(
-        `http://workout-app-ktu-fe-api1.onrender.com/sportsman/${sportsman._id}/workout/${workout._id}/comments/` +
+        `https://workout-app-ktu-fe-api1.onrender.com/sportsman/${sportsman._id}/workout/${workout._id}/comments/` +
           id,
         {
           headers: {

@@ -34,7 +34,7 @@ const EditComment = () => {
     if (info.name !== "" && info.description !== "") {
       try {
         const response = await axios.put(
-          `http://workout-app-ktu-fe-api1.onrender.com/sportsman/${sportsman._id}/workout/${workout._id}/comments/` +
+          `https://workout-app-ktu-fe-api1.onrender.com/sportsman/${sportsman._id}/workout/${workout._id}/comments/` +
             commentId,
           info,
           {
