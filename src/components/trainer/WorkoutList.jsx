@@ -10,7 +10,6 @@ import { redirect, useNavigate, Link } from "react-router-dom";
 import Forbidden403 from "../ErrorPages/Forbidden403";
 import NoAuthorized401 from "../ErrorPages/NoAuthorized401";
 import jwt_decode from "jwt-decode";
-import axios from "axios";
 const WorkoutList = () => {
   const navigate = useNavigate();
   const token = localStorage.getItem("accessToken");
