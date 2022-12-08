@@ -16,7 +16,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://workout-app-ktu-fe-api1.onrender.com/login",
+        "http://workout-app-ktu-fe-api1.onrender.com/login",
         loginInfo
       );
       localStorage.removeItem("accessToken");

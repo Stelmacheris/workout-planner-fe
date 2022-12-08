@@ -28,7 +28,7 @@ const WorkoutList = () => {
   const deleteHandler = async (id) => {
     try {
       const response = await axios.delete(
-        `https://workout-app-ktu-fe-api1.onrender.com/sportsman/${user._id}/workout/` +
+        `http://workout-app-ktu-fe-api1.onrender.com/sportsman/${user._id}/workout/` +
           id,
         {
           headers: {

@@ -21,7 +21,7 @@ const MeasurementList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/measurements", {
+        const response = await axios.get("http://workout-app-ktu-fe-api1.onrender.com/measurements", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },
@@ -38,7 +38,7 @@ const MeasurementList = () => {
   const deleteHandler = async (id) => {
     try {
       const response = await axios.delete(
-        `https://workout-app-ktu-fe-api1.onrender.com/measurements/` + id,
+        `http://workout-app-ktu-fe-api1.onrender.com/measurements/` + id,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -14,7 +14,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://workout-app-ktu-fe-api1.onrender.com/register",
+        "http://workout-app-ktu-fe-api1.onrender.com/register",
         registerInfo
       );
       setError(false);
