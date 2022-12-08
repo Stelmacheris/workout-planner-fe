@@ -24,7 +24,7 @@ const AddWorkout = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:3000/sportsman/${user._id}/workout`,
+        `https://workout-app-ktu-fe-api1.onrender.com/sportsman/${user._id}/workout`,
         info,
         {
           headers: {

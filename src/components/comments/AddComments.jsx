@@ -30,7 +30,7 @@ const AddComments = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:3000/sportsman/${sportsman._id}/workout/${workout._id}/comments`,
+        `https://workout-app-ktu-fe-api1.onrender.com/sportsman/${sportsman._id}/workout/${workout._id}/comments`,
         info,
         {
           headers: {

@@ -30,7 +30,8 @@ const UpdateWorkout = () => {
     if (info.name !== "" && info.link !== "" && info.description !== "") {
       try {
         const response = await axios.put(
-          `http://localhost:3000/sportsman/${user._id}/workout/` + id,
+          `https://workout-app-ktu-fe-api1.onrender.com/sportsman/${user._id}/workout/` +
+            id,
           info,
           {
             headers: {

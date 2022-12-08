@@ -28,7 +28,7 @@ const AddMeasurement = () => {
     if (info.height !== "" && info.height !== "") {
       try {
         const response = await axios.post(
-          `http://localhost:3000/measurements/`,
+          `https://workout-app-ktu-fe-api1.onrender.com/measurements/`,
           info,
           {
             headers: {

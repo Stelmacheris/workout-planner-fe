@@ -30,7 +30,7 @@ const AddSportsman = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/sportsman",
+        "https://workout-app-ktu-fe-api1.onrender.com/sportsman",
         {
           ...info,
           email: makeid(9) + "@test.com",

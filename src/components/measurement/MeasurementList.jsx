@@ -38,7 +38,7 @@ const MeasurementList = () => {
   const deleteHandler = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/measurements/` + id,
+        `https://workout-app-ktu-fe-api1.onrender.com/measurements/` + id,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
