@@ -36,8 +36,7 @@ const WorkoutList = () => {
           },
         }
       );
-
-      window.location.reload();
+      navigate("/workout");
     } catch (e) {}
   };
 
