@@ -25,6 +25,8 @@ const WorkoutList = () => {
     }
   );
 
+  console.log(response);
+
   const deleteHandler = async (id) => {
     try {
       const response = await axios.delete(
@@ -36,7 +38,9 @@ const WorkoutList = () => {
           },
         }
       );
+
       window.location.reload(true);
+      console.log(response);
     } catch (e) {}
   };
 
