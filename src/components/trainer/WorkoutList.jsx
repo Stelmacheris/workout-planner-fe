@@ -10,31 +10,49 @@ import { redirect, useNavigate, Link } from "react-router-dom";
 import Forbidden403 from "../ErrorPages/Forbidden403";
 import NoAuthorized401 from "../ErrorPages/NoAuthorized401";
 import jwt_decode from "jwt-decode";
-
+import axios from "axios";
 const WorkoutList = () => {
   const navigate = useNavigate();
   const token = localStorage.getItem("accessToken");
   const user = jwt_decode(token);
 
-  const { data, loading, response } = useAxios(
-    `/sportsman/${user._id}/workout`,
-    "GET",
-    "",
-    {
-      Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-    }
-  );
+  const [data, setData] = useState([]);
 
-  const deleteHandler = async (id) => {
-    try {
-      const response = await axios.delete(
-        `https://workout-app-ktu-fe-api1.onrender.com/sportsman/${user._id}/workout/` +
-          id,
+  // const { data, loading, response } = useAxios(
+  //   `/sportsman/${user._id}/workout`,
+  //   "GET",
+  //   "",
+  //   {
+  //     Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+  //   }
+  // );
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(
+        `https://workout-app-ktu-fe-api1.onrender.com/sportsman/${user._id}/workout`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },
         }
+      );
+
+      setData(response.data);
+    };
+
+    fetchData();
+  }, []);
+
+  const deleteHandler = async (id) => {
+    try {
+      const response = await axios.delete(
+        `https://workout-app-ktu-fe-api1.onrender.com/sportsman/${user._id}/workout/${id}` +
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            },
+          }
       );
 
       window.location.reload(false);
